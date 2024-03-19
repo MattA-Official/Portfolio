@@ -29,4 +29,7 @@ export default defineNuxtConfig({
   // seo: {
   //   redirectToCanonicalSiteUrl: true,
   // },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
 });
