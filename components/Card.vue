@@ -3,23 +3,55 @@ defineProps({
     title: String,
     body: String,
     url: String,
-    image: {
-        type: Object,
-        default: () => ({ src: '', alt: '' }),
-    }
+    // image.src: String,
+    // image.alt: String,
 });
 </script>
 
 <template>
-    <li>
+    <NuxtLink :to="url">
         <div>
-            <img :src="image.src" :alt="image.alt">
+            <img src="~/assets/img/placeholder.png" />
         </div>
-        <h3 class="card__title">
+        <h3>
             {{ title }}
         </h3>
-        <p class="card__txt">
+        <p>
             {{ body }}
         </p>
-    </li>
+    </NuxtLink>
 </template>
+
+<style scoped lang="scss">
+a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    border-radius: 8px;
+    color: var(--text);
+}
+
+img {
+    border-radius: 16px;
+}
+
+h3 {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-indent: 0;
+    text-align: center;
+    margin: 0.5rem 0 0;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+</style>
