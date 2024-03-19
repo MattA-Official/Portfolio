@@ -1,6 +1,9 @@
 <template>
     <header>
         <h1>Matt Adcock</h1>
-        <Navigation />
+        <div>
+            <Navigation />
+            <ColorPicker />
+        </div>
     </header>
 </template>
