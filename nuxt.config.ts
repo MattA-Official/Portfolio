@@ -33,4 +33,7 @@ export default defineNuxtConfig({
   sitemap: {
     strictNuxtContentPaths: true,
   },
+  nitro: {
+    preset: "bun",
+  },
 });
