@@ -7,9 +7,9 @@ const toggleColorMode = () => {
 </script>
 
 <template>
-    <button>
-        <Icon v-if="colorMode.value == 'light'" name="material-symbols:light-mode-rounded" @click="toggleColorMode" />
-        <Icon v-else name="material-symbols:dark-mode-rounded" @click="toggleColorMode" />
+    <button type="button" name="Toggle color mode" aria-label="Toggle color mode" @click="toggleColorMode">
+        <Icon v-if="colorMode.value == 'light'" name="material-symbols:light-mode-rounded" />
+        <Icon v-else name="material-symbols:dark-mode-rounded" />
     </button>
 </template>
 
