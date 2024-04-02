@@ -43,12 +43,11 @@ h2 {
     margin-bottom: 0;
 }
 
-p {
+p, label {
     font-family: var(--body);
     font-size: 1.1rem;
     hyphens: auto;
     line-height: 1.5;
-    text-indent: 1rem;
 }
 
 small, li {
