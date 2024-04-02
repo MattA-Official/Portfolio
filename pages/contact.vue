@@ -14,7 +14,7 @@ const sendMail = (fields: Fields) => {
     const { name, email, subject, message } = fields;
 
     mail.send({
-        from: `${name} via Contact Form <contact@matt-is.gay>`,
+        from: `${name} via Contact Form <no-reply.contact-form@matt-is.gay>`,
         replyTo: email,
         subject,
         text: message
