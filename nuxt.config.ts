@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "nuxt-icon",
     "nuxt-mail",
-    '@formkit/nuxt'
+    '@formkit/nuxt',
+    '@nuxtjs/tailwindcss'
   ],
   ogImage: {
     enabled: false,
