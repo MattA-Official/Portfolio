@@ -36,4 +36,9 @@ export default defineNuxtConfig({
   nitro: {
     preset: "bun",
   },
+  routeRules: {
+    "/pronouns": {
+      redirect: "https://en.pronouns.page/@matta"
+    }
+  }
 });
