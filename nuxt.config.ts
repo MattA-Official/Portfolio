@@ -1,8 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// Load environment variables from .env file
+import 'dotenv/config';
+
 export default defineNuxtConfig({
   devtools: {
     enabled: true,
-
     timeline: {
       enabled: true,
     },
@@ -13,6 +14,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/seo",
     "nuxt-icon",
+    "nuxt-mail",
+    '@formkit/nuxt'
   ],
   ogImage: {
     enabled: false,
@@ -25,11 +28,8 @@ export default defineNuxtConfig({
   },
   colorMode: {
     preference: "system",
-    fallback: "dark", // will render in dark mode
+    fallback: "dark",
   },
-  // seo: {
-  //   redirectToCanonicalSiteUrl: true,
-  // },
   sitemap: {
     strictNuxtContentPaths: true,
   },
@@ -40,5 +40,22 @@ export default defineNuxtConfig({
     "/pronouns": {
       redirect: "https://en.pronouns.page/@matta"
     }
+  },
+  mail: {
+    message: {
+      to: 'contact@matt-is.gay',
+    },
+    smtp: {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
+      }
+    }
+  },
+  formkit: {
+    // Experimental support for auto loading (see note):
+    autoImport: true
   }
 });
